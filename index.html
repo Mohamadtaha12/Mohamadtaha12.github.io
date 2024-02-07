@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Personal Website</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      padding-top: 56px;
+    }
+    .circle-image {
+      border-radius: 50%;
+      max-width: 100%;
+      height: auto;
+    }
+    .about-me-section {
+      padding: 50px 0;
+    }
+    .wallpaper-image {
+      width: 100%;
+      height: auto;
+    }
+    .experience-section {
+      padding: 50px 0;
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+    }
+    /* افزودن خط زیر برای افزایش اندازه فونت */
+    .about-me-section p {
+      font-size: 18px; /* مقدار مورد نظر خود را وارد کنید */
+    }
+    /* افکت نمایش اولیه با استفاده از Animate.css */
+    #loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- افکت نمایش اولیه با استفاده از Animate.css -->
+  <div id="loading" class="animate__animated animate__fadeIn animate__delay-2s">
+    <h1>Loading...</h1>
+    <!-- این المان می‌تواند تصویر یا هر چیز دیگری باشد -->
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Mohamad taha heydari</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <!-- افزودن onclick بر روی لینک Home -->
+          <a class="nav-link" href="#home" onclick="scrollToSection('home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#resume">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Me Section -->
+  <section id="about" class="container about-me-section">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="file:///D:/aks%20viseo%20aparat/websiate.jpg" alt="Your Image" class="img-fluid circle-image">
+      </div>
+      <div class="col-md-6">
+        <h2>درباره من </h2>
+        <!-- افزودن استایل برای افزایش اندازه فونت -->
+        <p style="font-family: 'IRANSansWeb(FaNum)', sans-serif; font-size: 18px;">
+          من یک برنامه‌نویس و بازی‌ساز هستم که در زمینه توسعه‌ی بازی‌های موبایلی در مایکت تخصص دارم. مهارت‌های من شامل اسکرچ و مسلط بودن به مهارت‌های کامپیوتری و استفاده از بسترهای مختلف می‌باشد. همچنین، تجربه‌ی تدریس و تولید محتوا در زمینه برنامه‌نویسی را نیز دارم.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wallpaper Image -->
+  <section class="container">
+    <img src="file:///C:/Users/BEROOZSTOCK/Downloads/46_Nero%20AI_Face_x4.jpg" alt="Wallpaper" class="wallpaper-image">
+  </section>
+
+  
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <!-- حذف Navigation -->
+        <!-- <div class="col">
+          <a href="#home">Navigation</a>
+        </div> -->
+        <!-- اصلاح Address -->
+        <div class="col">
+          <a href="https://www.aparat.com/Mohamad_Taha_Heidari">Address</a>
+        </div>
+        <!-- اصلاح About Me -->
+        <div class="col">
+          <a href="#about">About Me</a>
+        </div>
+      </div>
+      <p>Design and develop by ChatGPT with love.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- افکت نمایش اولیه با استفاده از Animate.css -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var loadingElement = document.getElementById("loading");
+      loadingElement.style.display = "none";
+    });
+
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
